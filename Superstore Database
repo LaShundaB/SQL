@@ -22,3 +22,17 @@ WHERE price>0
 SELECT 'Kitchen Supplies'
 FROM superstore
 WHERE average_rating>4.5
+
+SELECT *
+FROM customer_subscriptions
+WHERE product_id=1;
+
+SELECT email
+FROM customer_subscriptions
+WHERE product_id
+IN (SELECT product_id
+    FROM products
+    WHERE product_type="Internet");
+
+
+
